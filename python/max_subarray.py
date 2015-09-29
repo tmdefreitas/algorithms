@@ -8,6 +8,7 @@ class MaxSubArray(object):
 	def __init__(self, A):
 		self.A = A
 		self.low, self.high, self.max = self.max_subbarray(0, len(self.A)-1)
+		self.subbarray = list(self.A[self.low:self.high+1])
 
 
 	def max_crossing_subarray(self, low, mid, high):
@@ -74,8 +75,6 @@ class TestMaxSubArray(unittest.TestCase):
 
 	def test_all_positive(self):
 		self.assertEqual(MaxSubArray([4, 2, 10, 19, 6]).max, 41)
-
-
 
 
 if __name__ == '__main__':
