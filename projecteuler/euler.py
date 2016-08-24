@@ -32,8 +32,25 @@ def problem2():
 
     return sum(i for i in _fib_iter() if i % 2 == 0)
 
+def problem3():
+    """ What is the largest prime factor of the number 600851475143?"""
+    def _prime_factorization(n):
+        """Returns the list of prime factors of a number n"""
+        factors = []
+        f = 2
+        # Use trial division to add factors
+        while f**2 <= n:
+            while (n % f) == 0:
+                factors.append(f)
+                n //= f
+            f += 1
 
+        if n > 1:
+            factors.append(n)
 
+        return factors
+
+    return max(_prime_factorization(600851475143))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
