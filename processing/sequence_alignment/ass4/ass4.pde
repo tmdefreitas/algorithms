@@ -8,7 +8,7 @@ import java.io.*;
 import java.lang.*;
 
 //Data source
-final String DATA_FILE = "C:\\Users\\Tim\\Documents\\Biovis\\assignment4\\dystrophin.fasta";
+final String DATA_FILE = "~/Documents/notwork/algorithms/processing/sequence_alignment/dystrophin.fasta";
 
 //Default Gap Penalty
 final int DEFAULT_GAP = -3;
@@ -31,7 +31,7 @@ final int AVG_WINDOW = 8;// color based on average of entropies +-5 spaces
 Alignment a;
 int LAST_BOX = 0; //stores most recent box to focus on
 
-
+surface.setSize()
 //Processing setup function
 void setup(){
   LinkedList<FastaSequence> fs = loadFile(DATA_FILE);
