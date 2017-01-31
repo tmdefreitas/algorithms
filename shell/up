@@ -1,0 +1,18 @@
+ # Cd upward $1 times
+ function up(){
+     if [ "$#" -ne 1 ]; then
+         echo "Usage: up n";
+         return 1;
+     fi
+ 
+     if [ $1 -lt 1 ]; then
+         echo up: cannot go up $1 times
+         return 2;
+     fi
+ 
+     pth=""
+     for i in $(seq $1); do
+       pth=$pth../
+     done
+     cd $pth
+ }
